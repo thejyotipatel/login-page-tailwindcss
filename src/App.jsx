@@ -1,69 +1,54 @@
-// src/App.jsx
-import React, { useState } from 'react'
-
 function App() {
-  const [username, setUsername] = useState('')
-  const [isUsernameTaken, setIsUsernameTaken] = useState(false)
-
-  const handleUsernameChange = (e) => {
-    setUsername(e.target.value)
-    setIsUsernameTaken(e.target.value === 'John') // Simulate username check
-  }
-
   return (
-    <div className='min-h-screen flex items-center justify-center bg-gray-100'>
-      <div className='max-w-4xl mx-auto bg-white rounded-lg shadow-md overflow-hidden md:flex'>
-        <div className='hidden md:block md:w-1/2 bg-yellow-200 p-8'>
-          <h2 className='text-2xl font-bold mb-4'>
+    <div className='  flex items-center justify-center bg-gray-100'>
+      <div className='  mx-auto my-auto bg-white    overflow-hidden md:flex'>
+        <div className='hidden md:block md:w-2/3 bg-yellow-200 p-5 h-screen   '>
+          <h2 className='text-2xl font-bold text-center mt-4  text-yellow-800'>
             Discover the world’s top Designers & Creatives.
           </h2>
-          <div className='mt-10'>
+          <div className='mt-10 '>
             <img
-              src='https://via.placeholder.com/400'
+              src='./Tablet login-pana.svg'
               alt='Artwork'
-              className='w-full rounded-lg'
+              className=' max-w-sm w-full mx-auto '
             />
-            <p className='text-xs mt-2 text-gray-500'>Art by Peter Tarka</p>
+            <p className='text-xs m-3 text-gray-500'>
+              Illustrations by{' '}
+              <a href='https://storyset.com/user' className=' underline '>
+                Storyset
+              </a>
+            </p>
           </div>
         </div>
-        <div className='w-full md:w-1/2 p-8'>
+        <div className='w-full  p-8 md:w-2/3'>
           <h2 className='text-2xl font-bold mb-6'>Sign up to Dribbble</h2>
           <form>
             <div className='mb-4'>
               <label className='block text-gray-700'>Name</label>
               <input
                 type='text'
-                className='mt-1 block w-full border-gray-300 rounded-md shadow-sm'
+                className='mt-1 block w-full border-2 border-pink-100 rounded-md shadow-sm p-1 outline-1 outline-pink-600'
               />
             </div>
             <div className='mb-4'>
               <label className='block text-gray-700'>Email</label>
               <input
                 type='email'
-                className='mt-1 block w-full border-gray-300 rounded-md shadow-sm'
+                className='mt-1 block w-full border-pink-100 rounded-md shadow-sm p-2 outline-1 outline-pink-600 border-2 '
               />
             </div>
             <div className='mb-4'>
               <label className='block text-gray-700'>Username</label>
               <input
                 type='text'
-                value={username}
-                onChange={handleUsernameChange}
-                className={`mt-1 block w-full ${
-                  isUsernameTaken ? 'border-red-500' : 'border-gray-300'
-                } rounded-md shadow-sm`}
+                className='mt-1 block w-full  p-2 outline-1 outline-pink-600 border-2  border-pink-100 rounded-md shadow-sm'
               />
-              {isUsernameTaken && (
-                <p className='text-red-500 text-sm mt-1'>
-                  Username has already been taken
-                </p>
-              )}
             </div>
             <div className='mb-4'>
               <label className='block text-gray-700'>Password</label>
               <input
                 type='password'
-                className='mt-1 block w-full border-gray-300 rounded-md shadow-sm'
+                className='mt-1 block w-full border-pink-100 rounded-md shadow-sm p-2 outline-1 outline-pink-600 border-2 '
               />
             </div>
             <div className='mb-4 flex items-start'>
